@@ -2,9 +2,10 @@ import random
 from typing import Final
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
+from token_username import TOKEN,BOT_USERNAME
 
-TOKEN: Final = "6818091074:AAGemFJcN4AxMPA9GUjthqeXCL2pXKK6HgM"
-BOT_USERNAME: Final = '@poabinight_bot'
+TOKEN
+BOT_USERNAME
 
 #Commands
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
