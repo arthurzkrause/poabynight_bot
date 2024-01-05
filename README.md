@@ -1,8 +1,9 @@
-# Poabynight_bot
+# @Poabynight_bot
 Bot de Telegram para facilitar narração de RPG Vampiro a Máscara (poabynight_bot)
 
-##/v5
+# Comandos disponíveis
+### /v5
 Rolagem de dados normais e dados de fome
 
-##Character Generator
+### /Character_Generator
 Cria personagens aleatórios com as regras do livro oficial.
