@@ -2,7 +2,7 @@ import random
 from typing import Final
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
-from token_username import TOKEN,BOT_USERNAME
+from tokentoken.token_username import TOKEN,BOT_USERNAME
 
 TOKEN
 BOT_USERNAME
