@@ -1,25 +1,38 @@
 import random
 from typing import Final
+from typing import List
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 from tokentoken.token_username import TOKEN,BOT_USERNAME
+from vampire_random_generator.disciplines_functions import all_discipline
+from vampire_random_generator.clans_text import clan_description
+from vampire_random_generator.eater_eggs import easter_eggs_test
 
 TOKEN
 BOT_USERNAME
 
 #Commands
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text('Olá, bem vindo ao Mundo das Trevas. Este é um bot do POA by Night, para mais informações, acesse \
-nossas redes: https://linktr.ee/poabynight')
+    await update.message.reply_text(
+        'Olá, bem vindo ao Mundo das Trevas!\n- Este é um bot do POA by Night, um projeto de enciclopédia onde você pode descobrir sobre o mundo de RPG criado para o sistema de Vampiro a Máscara especialmente para Porto Alegre, Rio Grande do Sul, Brasil. para mais informações, acesse nossas redes: https://linktr.ee/poabynight\n\n'
+'Aqui você pode:\n'
+'- Jogar dados com o comando /v5\n'
+'- Fazer um personagem aleatório com /character_generator.\n'
+'- Ter informações sobre os clãs e disciplinas ao escrever seus nomes na conversa\n'
+'- Fica ligado pra mais novidades em breve'
+)
 
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
-        'Versão 0.0.2\n'
-        'Commands:\n'
-        '/v5 X Y (X= dados normais | Y = dados de fome)\n'
-        'Obs: Não dá pra usar 0 nos dados, já to de olho nesse bug. Dupla de 10 também não somam 2, fiquem de olho nos seus críticos! \n',
-        'Character Generator\n'
-        'Gera um personagem aleatório'
+        'Versão 1.2.0\n'
+        'COMANDOS:\n'
+        '- /v5 X Y (X= dados normais | Y = dados de fome)\n'
+        'Obs: Não use 0 nos dados.\nDupla de 10 não somam +2 no resultado, fiquem de olho nos seus críticos! \n'
+        '- /character_generator: Gera um personagem aleatório com Skills, Attributes e Disciplinas\n'
+        '- Tenha informações sobre os clãs e disciplinas! É só digitar o nome deles na conversa!\n'
+        ' Quer saber se tem alguma novidade? Digita: log\n\n'
+        'Quer mandar alguma ideia de update?\n'
+        'https://www.instagram.com/poabynight\n'
         )
 
 async def character_generator(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -36,19 +49,18 @@ async def character_generator(update: Update, context: ContextTypes.DEFAULT_TYPE
     def name_surname_age():
         age = random.randint(18, 130)
 
-        first_name = [name.strip() for name in name_list[0].split("\n") if name.strip()]
-        name_generated = random.choice(first_name)
+        name_generated = random.choice(name_list)
 
-        surnames = [surname.strip() for surname in surname_list[0].split("\n") if surname.strip()]
-        first_surname_generated = random.choice(surnames)
-        second_surname_generated = random.choice(surnames)
+        first_surname_generated = random.choice(surname_list)
+        second_surname_generated = random.choice(surname_list)
 
-        return f"Nome:{name_generated} {first_surname_generated} {second_surname_generated}\nAge: {age}\n"
+        return f"Nome:\n{name_generated} {first_surname_generated} {second_surname_generated}\nIdade: {age}\n"
+
 
     # ATTRIBUTES
     def attributes_generator():
         reset_attributes_values()
-        result = "ATTRIBUTES\n"
+        result = "\nATRIBUTOS\n"
         for attribute in attributes_all:
             if available_attributes_value:
                 assigned_value = random.choice(available_attributes_value)
@@ -63,7 +75,7 @@ async def character_generator(update: Update, context: ContextTypes.DEFAULT_TYPE
     # SKILLS
     def skill_generator(category):
         reset_skill_values()
-        result = f"\nSKILLS:\nSkills type: {category}\n"
+        result = f"\nHABILIDADES:\nTipo: {category}\n"
         values = available_skill_value.get(category, [])
 
         for atributo in skills_all:
@@ -99,6 +111,14 @@ async def v5_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         num_dice1 = int(args[1])
         num_dice2 = int(args[2])
 
+        # Verifica se os números são diferentes de zero
+        if num_dice1 == 0 and num_dice2 == 0:
+            await update.message.reply_text("Vai rolar zero dados pra que?")
+            return
+        elif num_dice1 == 0 or num_dice2 == 0:
+            await update.message.reply_text("Não consigo rolar zero 😞. Coloca 1 no dado de fome e ignora ele!")
+            return
+
         # Realiza as rolagens de dados
         result1 = roll_dice(num_dice1)
         result2 = roll_dice(num_dice2)
@@ -109,75 +129,72 @@ async def v5_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
         # Verifica se há crítico bestial
         crit_message = ""
-        if "10" in result1.split(', ') and "10" in result2.split(', '):
-            crit_message = "Crítico bestial!"
-        elif "1" in result1.split(', ') and "1" in result2.split(', '):
-            crit_message = "Fracasso bestial!"
-
-        # Transforma as strings em listas de inteiros
-        result1_list = list(map(int, result1.split(', ')))
-        result2_list = list(map(int, result2.split(', ')))
+        if 10 in result1 and 10 in result2:
+            crit_message = "Crítico bestial!\nNão esquece de dobrar os 10 e adicionar aos sucessos!"
+        elif 1 in result1 and 1 in result2:
+            crit_message = "Fracasso bestial!\nConfere com o narrador a dificuldade da rolagem!"
 
         # Conta os sucessos para cada rolagem
-        successes_1 = sum(1 for roll in result1_list if int(roll) >= 6)
-        successes_2 = sum(1 for roll in result2_list if int(roll) >= 6)
+        successes_1 = sum(1 for roll in result1_sorted if int(roll) >= 6)
+        successes_2 = sum(1 for roll in result2_sorted if int(roll) >= 6)
 
         # Calcula o total de sucessos
         total_successes = successes_1 + successes_2
 
-        successes = f'{total_successes} successes'
+        successes = f'{total_successes} sucessos'
 
         # Cria uma mensagem de resposta
-        response_message = f"Dados: {result1_sorted}\nDados de fome: {result2_sorted}\n{crit_message}\n{successes}"
+        response_message = f"Dados: {', '.join(map(str, result1_sorted))}\nDados de fome: {', '.join(map(str, result2_sorted))}\n{successes}\n{crit_message}"
         # Responde ao usuário
         await update.message.reply_text(response_message)
 
     else:
         # Mensagem de erro se os argumentos não forem válidos
-        response_message = "Formato inválido. Use '/v5 3 1', primeiro número para dados normais e segundo para dados de fome!"
+        response_message = f"Quer usar os dados? Usa na forma '/v5 4 1'!\nPrimeiro os dados normais e depois os dados de fome!\nCuidado com dupla de 10, eles não são dobrados!"
 
         # Responde ao usuário com mensagem de erro
         await update.message.reply_text(response_message)
 
-def roll_dice(num_dice: int) -> str:
+
+def roll_dice(num_dice: int) -> List[int]:
     # Realiza a rolagem de dados de 10 lados
     results = [random.randint(1, 10) for _ in range(num_dice)]
 
-    # Formata os resultados como uma string
-    result_str = ", ".join(map(str, results))
+    return results
 
-    return result_str
-
-def sort_dice_results(results_str: str) -> str:
-    # Converte a string de resultados em uma lista de inteiros
-    results_list = list(map(int, results_str.split(", ")))
-
+def sort_dice_results(results_list: List[int]) -> List[int]:
     # Ordena a lista em ordem decrescente
     results_sorted = sorted(results_list, reverse=True)
 
-    # Formata os resultados ordenados como uma string
-    result_str_sorted = ", ".join(map(str, results_sorted))
+    return results_sorted
 
-    return result_str_sorted
+async def clans_and_disciplines(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text('Quer saber mais sobre os clãs e as suas disciplinas?\nÉ só digitar o nome deles \
+aqui no chat que você vai ter algumas informações sobre eles! \
+Não precisa digitar o /clan\n\n'
+'As opções são:\nBanu Haqim, Brujah, Gangrel, Caitiff, Hecata, Lasombra, Malkavian, Ministério, \
+Nosferatu, Ravnos, Salubri, Toreador, Tremere, Tzimisce, Ventrue, Humanos e Ghouls\
+\nVocê também pode conferir informações sobre as disciplinas! Coloca o nome delas em inglês e vai surgir um texto explicando ela.\nNão, não tá traduzido.'
+)
 
 #Handle Responses
 
 def handle_response(text: str) -> str:
     processed: str = text.lower()
-    if 'vampiro' in processed:
-        return 'Nós não usamos a palavra "Vampiro"! O que você é, um animal? Não, você é um Kindred, um Membro. Modere o linguajar!'
-
-    if 'camarilla' in processed:
-        return 'Camarilla? O que você sabe sobre a Torre de Marfim? Que segredos você esconde?'
+    #EASTER EGG - vampire_random_generator / easter_eggs
+    if processed in easter_eggs_test:
+        return f'{easter_eggs_test[processed]}'
     
-    if 'anarquia' in processed:
-        return 'Dizem que ela existe, mas como todo movimento juvenil, ele morre no esquecimento.'
-    if 'poabynight' in processed:
-        return 'Quer saber mais? www.poabynight.com.br!'
+    #CLÃS - vampire_random_generator / Clans_text
+    elif processed in clan_description:
+        return f'{clan_description[processed]}'
+    
+    #DISCIPLINES - vampire_random_generator / disciplines_functions
+    elif processed in all_discipline:
+        return f'{processed}:\n{all_discipline[processed]}'
     else:
-        return "Não to aqui pra conversar, mas confesso que tenho alguns surpresas se você continuar tentando."
-    
-
+        return "Digita o nome da disciplina ou do clã que você tem interesse! Tem algumas outras surpresas por aí, não desiste!"    
+  
 #Handling Messages
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     message_type: str = update.message.chat.type
@@ -208,6 +225,7 @@ if __name__ == '__main__':
     app.add_handler(CommandHandler('help',help_command))
     app.add_handler(CommandHandler('v5',v5_command))
     app.add_handler(CommandHandler('character_generator',character_generator))
+    app.add_handler(CommandHandler('clans',clans_and_disciplines))
 
     #Messages
     app.add_handler(MessageHandler(filters.TEXT,handle_message))
