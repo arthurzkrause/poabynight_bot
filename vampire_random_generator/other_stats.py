@@ -112,8 +112,10 @@ def stats_generator():
             f'Clã: {clan}\n'
         )
 
-    # Verifica o clã - Isso aqui tá péssimo - Corrigir!
-    if 'Banu Haqim'or 'Brujah'or 'Gangrel'or 'Caitiff'or 'Hecata'or 'Lasombra'or 'Malkavian'or 'The Ministry'or 'Nosferatu'or 'Ravnos'or 'Salubri'or 'Toreador'or 'Tremere'or 'Tzimisce'or 'Ventrue' in clan:
+    # Verifica o clã
+    valid_clans = ['Banu Haqim', 'Brujah', 'Gangrel', 'Caitiff', 'Hecata', 'Lasombra', 'Malkavian', 'The Ministry', 'Nosferatu', 'Ravnos', 'Salubri', 'Toreador', 'Tremere', 'Tzimisce', 'Ventrue', 'Sangue Fraco']
+
+    if clan in valid_clans:
         initialize_disciplines_clan_list(clan)
         result += f'\nDisciplines:\n{disciplines_generator()}'
 
