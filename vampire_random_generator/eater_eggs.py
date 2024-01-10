@@ -6,9 +6,10 @@ easter_eggs_test = {
     'disciplinas': 'Quer saber mais sobre as disciplinas? Coloca o nome delas em inglês aqui no chat que você vai receber a mesma informaçõe que há no vtm.paradoxwikis.com',
 }
 
-controle_updates = [
-        "05/01/24: Adicionado Rolagem de dados"
-        "06/01/24: Adicionado Gerador de Personagem"
-        "07/01/24: Adicionado disciplinas no gerador de personagem"
-        "09/01/24: Adicionado informações sobre clãs e disciplinas."
-]
+controle_updates = (
+    "05/01/24: Adicionado Rolagem de dados",
+    "06/01/24: Adicionado Gerador de Personagem",
+    "07/01/24: Adicionado disciplinas no gerador de personagem",
+    "09/01/24: Adicionado informações sobre clãs e disciplinas.",
+    "10/01/24: Atualizado rolagem de dados e corrigido limite de idade para Character Generator",
+)

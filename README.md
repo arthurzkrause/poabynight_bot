@@ -7,3 +7,6 @@ Rolagem de dados normais e dados de fome
 
 ### /Character_Generator
 Cria personagens aleatórios com as regras do livro oficial.
+
+### /clans and disciplines
+Cria personagens aleatórios com as regras do livro oficial.
