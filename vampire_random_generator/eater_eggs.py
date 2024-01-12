@@ -7,9 +7,10 @@ easter_eggs_test = {
 }
 
 controle_updates = (
-    "05/01/24: Adicionado Rolagem de dados",
-    "06/01/24: Adicionado Gerador de Personagem",
-    "07/01/24: Adicionado disciplinas no gerador de personagem",
-    "09/01/24: Adicionado informações sobre clãs e disciplinas.",
-    "10/01/24: Atualizado rolagem de dados e corrigido limite de idade para Character Generator",
+    "05/01/24: Adicionado: Rolagem de dados",
+    "06/01/24: Adicionado: Gerador de Personagem",
+    "07/01/24: Adicionado: Disciplinas no gerador de personagem",
+    "09/01/24: Adicionado: Informações sobre clãs e disciplinas",
+    "10/01/24: Atualizado: Rolagem de dados e corrigido limite de idade para Character Generator",
+    "11/01/24: Atualizado: Nome das disciplinas, README, Informações sobre níveis das disciplinas. Adicionado: níveis de protean",
 )

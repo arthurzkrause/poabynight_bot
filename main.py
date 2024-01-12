@@ -53,13 +53,13 @@ async def character_generator(update: Update, context: ContextTypes.DEFAULT_TYPE
         first_surname_generated = random.choice(surname_list)
         second_surname_generated = random.choice(surname_list)
 
-        return f"Nome:\n{name_generated} {first_surname_generated} {second_surname_generated}\nIdade: {age}\n"
+        return f"Name:\n{name_generated} {first_surname_generated} {second_surname_generated}\nAge: {age}\n"
 
 
     # ATTRIBUTES GENERATOR
     def attributes_generator():
         reset_attributes_values()
-        result = "\nATRIBUTOS\n"
+        result = "\nATTRIBUTES\n"
         for attribute in attributes_all:
             if available_attributes_value:
                 assigned_value = random.choice(available_attributes_value)
@@ -74,7 +74,7 @@ async def character_generator(update: Update, context: ContextTypes.DEFAULT_TYPE
     # SKILLS GENERATOR - usa quase tudo que tá em vampir_random_generator.other_stats
     def skill_generator(category):
         reset_skill_values()
-        result = f"\nHABILIDADES:\nTipo: {category}\n"
+        result = f"\nSKILLS:\nTipo: {category}\n"
         values = available_skill_value.get(category, [])
 
         for atributo in skills_all:
@@ -96,7 +96,7 @@ async def character_generator(update: Update, context: ContextTypes.DEFAULT_TYPE
 
     await update.message.reply_text(vampire_generated)
 
-#/v5
+#DADOS
 async def v5_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     text = update.message.text
     # Divide o texto em partes usando espaços como delimitador

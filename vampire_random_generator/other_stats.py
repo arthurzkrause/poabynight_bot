@@ -44,7 +44,7 @@ def initialize_disciplines_clan_list(clan):
         disciplines_clan_list = [animalism, protean_tzimisce, dominate]
     elif "Ventrue" in clan:
         disciplines_clan_list = [dominate, fortitude, presence]
-    elif "Sangue Fraco" in clan:
+    elif "Thin Blood" in clan:
         disciplines_clan_list = [thin_blood_alchemy_1, thin_blood_alchemy_2]   
 
 def disciplines_generator():
@@ -83,7 +83,7 @@ def stats_generator():
 
     # HEALTH_TRACK
     health = attributes_all['Stamina'] + 3
-    result += f'Vida: {health}\n'
+    result += f'Health: {health}\n'
 
     # WILLPOWER
     willpower = attributes_all['Composure'] + attributes_all['Resolve']
@@ -91,7 +91,7 @@ def stats_generator():
 
     # HUMANITY
     humanity = random.choice(humanity_choices)
-    result += f"Humanidade: {humanity}\n"
+    result += f"Humanity: {humanity}\n"
 
     #GENERATION + BLOODPOTENCY + CLAN
     generation = random.choice(generation_choices)
@@ -99,21 +99,21 @@ def stats_generator():
     clan = random.choice(clan_choices)
     if generation in [16,15,14]:
        blood_potency = 0
-       clan = 'Sangue Fraco'
+       clan = 'Thin Blood'
        result += (
-            f"Potência de Sangue: Zero\n"
-            f"Geração: {generation}\n"
-            f'Clã: {clan}\n'
+            f"Blood Potency: Zero\n"
+            f"Generation: {generation}\n"
+            f'Clan: {clan}\n'
             )
     else:
         result += (
-            f'Potência de Sangue: {blood_potency}\n'
-            f'Geração: {generation}\n'
-            f'Clã: {clan}\n'
+            f'Blood Potency: {blood_potency}\n'
+            f'Generation: {generation}\n'
+            f'Clan: {clan}\n'
         )
 
     # Verifica o clã
-    valid_clans = ['Banu Haqim', 'Brujah', 'Gangrel', 'Caitiff', 'Hecata', 'Lasombra', 'Malkavian', 'The Ministry', 'Nosferatu', 'Ravnos', 'Salubri', 'Toreador', 'Tremere', 'Tzimisce', 'Ventrue', 'Sangue Fraco']
+    valid_clans = ['Banu Haqim', 'Brujah', 'Gangrel', 'Caitiff', 'Hecata', 'Lasombra', 'Malkavian', 'The Ministry', 'Nosferatu', 'Ravnos', 'Salubri', 'Toreador', 'Tremere', 'Tzimisce', 'Ventrue', 'Thin Blood']
 
     if clan in valid_clans:
         initialize_disciplines_clan_list(clan)
