@@ -28,7 +28,7 @@ blood_sorcery = [
     ["Blood Sorcery"],
     ["Corrosive Vitae", "Shape the Sanguine Sacrament", "A Taste for Blood", "Koldunic Sorcery"],
     ["Extinguish Vitae", "Scour Secrets"],
-    ["Blood of Potency", "Scorpion's Touch", "Transitive Bond"],
+    ["Blood of Potency", "Scorpion's Touch", "Transitive Bond","Ripples of the Heart"],
     ["Theft of Vitae", "Blood Aegis"],
     ["Baal's Caress", "Cauldron of Blood", "Reclamation of Vitae"]
 ]
@@ -83,7 +83,7 @@ fortitude = [
 obfuscate = [
     ["Obfuscate"],
     ["Cloak of Shadows", "Silence of Death"],
-    ["Chimerstry", "Ghost's Passing", "Unseen Passage", "Ventriloquism"],
+    ["Chimerstry", "Ghost's Passing", "Unseen Passage", "Ventriloquism","Doubletalk"],
     ["Fata Morgana", "Ghost in the Machine", "Mask of a Thousand Faces", "Mask of Isolation", "Mental Maze", "Mind Masque"],
     ["Conceal", "Vanish"],
     ["Cloak the Gathering", "Imposter's Guise"]
@@ -91,7 +91,7 @@ obfuscate = [
 obfuscate_malkavian = [
     ["Obfuscate"],
     ["Cloak of Shadows", "Silence of Death"],
-    ["Unseen Passage", "Ventriloquism"],
+    ["Unseen Passage", "Ventriloquism","Doubletalk"],
     ["Mask of a Thousand Faces", "Mask of Isolation", "Mental Maze", "Mind Masque"],
     ["Conceal", "Vanish"],
     ["Cloak the Gathering", "Imposter's Guise"]
@@ -99,7 +99,7 @@ obfuscate_malkavian = [
 obfuscate_nosferatu = [
     ["Obfuscate"],
     ["Cloak of Shadows", "Silence of Death"],
-    ["Ghost's Passing", "Unseen Passage"],
+    ["Ghost's Passing", "Unseen Passage","Doubletalk"],
     ["Ghost in the Machine"],
     ["Conceal", "Vanish"],
     ["Cloak the Gathering"]
@@ -107,7 +107,7 @@ obfuscate_nosferatu = [
 obfuscate_ravnos = [
     ["Obfuscate"],
     ["Cloak of Shadows", "Silence of Death"],
-    ["Chimerstry", "Ghost's Passing", "Unseen Passage"],
+    ["Chimerstry", "Ghost's Passing", "Unseen Passage","Doubletalk"],
     ["Fata Morgana", "Ghost in the Machine", "Mask of a Thousand Faces"],
     ["Conceal", "Vanish"],
     ["Cloak the Gathering", "Imposter's Guise"]
@@ -133,7 +133,7 @@ oblivion_hecata = [
 oblivion_ceremonies = [
     ["Oblivion Ceremonies"],
     ["Gift of False Life", "Knowing Stone", "Summon Spirit", "Traveler's Call"],
-    ["Awaken the Homuncular Servant", "Blinding the Alloy Eye", "Compel Spirit"],
+    ["Awaken the Homuncular Servant", "Blinding the Alloy Eye", "Compel Spirit", "Maw of Ahriman"],
     ["Fortezza Sindonica", "Harrowhaunt", "Host Spirit", "Knit the Veil", "Name of the Father", "Shambling Hordes"],
     ["Befoul Vessel", "Bind the Spirit", "Death Rattle", "Split the Veil"],
     ["Ex Nihilo", "Lazarene Blessing", "Pit of Contemplation"]
@@ -153,14 +153,14 @@ presence = [
     ["Awe", "Daunt", "Eyes of the Serpent"],
     ["Lingering Kiss", "Melpominee"],
     ["Clear the Field", "Dread Gaze", "Entrancement", "Thrown Voice", "True Love's Face"],
-    ["Irresistible Voice", "Magnum Opus", "Suffuse the Edifice", "Summon"],
+    ["Irresistible Voice", "Magnum Opus", "Suffuse the Edifice", "Summon","Wingman"],
     ["Majesty", "Star Magnetism"]
 ]
 
 protean = [
     ["Protean"],
     ["Eyes of the Beast", "Weight of the Feather"],
-    ["Feral Weapons"],
+    ["Feral Weapons","Serpent's Kiss","The False Sip"],
     ["Earth Meld", "Shapechange", "Visceral Absorption"],
     ["Metamorphosis"],
     ["The Heart of Darkness", "Mist Form", "One with the Land", "The Unfettered Heart"]
