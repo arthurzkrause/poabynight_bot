@@ -29,7 +29,9 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         '- /v5 X Y (X= Total de Dados | Y = Total de Dados de Fome)\n'
         '- /character_generator: Gera um personagem aleatório com Skills, Attributes e Disciplinas\n'
         '- Tenha informações sobre os clãs e disciplinas! É só digitar o nome deles na conversa!\n'
-        ' Quer saber quando foi a última atualização? Digita: updates\n\n'
+        '- Quer saber quando foi a última atualização? Digita: updates\n'
+        '- Rolagens para ajudar os Narradores? Digita: Dice Rolls\n'
+        '- Esqueceu como é a rolagem de predador? Que tal: predator type roll\n\n'
         'Quer mandar alguma ideia de update?\n'
         'https://www.instagram.com/poabynight\n'
         )

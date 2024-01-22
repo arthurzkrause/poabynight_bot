@@ -37,7 +37,7 @@ blood_sorcery_rituals = [
     ["Blood Sorcery Rituals"],
     ["Astromancy", "Beelzebeatit", "Bind the Accusing Tongue", "Blood Walk", "Bloody Message", "Clinging of the Insect", 
      "Coax the Garden", "Craft Bloodstone", "Douse the Fear", "Enrich the Blood", "Herd Ward (Minor)", "Letter Ward", 
-     "Seal the Brand", "Wake with Evening's Freshness", "Ward Against Ghouls"],
+     "Seal the Brand", "Wake with Evening's Freshness", "Ward Against Ghouls", "Blood Apocrypha"],
     ["As Fog on Water", "Calling the Aura's Remnants", "Calix Secretus", "Communicate with Kindred Sire", "Craftmaster", 
      "Depths of Nightmare", "Elemental Grasp", "Enhance Dyscrasia", "Eyes of Babel", "Illuminate Trail of Prey", "Le Sang de l'Amour", 
      "Soporific Touch", "Silentia Mortis", "Shroud of Silence", "Tiamat Glistens", "Truth of Blood", "Unseen Underground", 
@@ -132,7 +132,7 @@ oblivion_hecata = [
 
 oblivion_ceremonies = [
     ["Oblivion Ceremonies"],
-    ["Gift of False Life", "Knowing Stone", "Summon Spirit", "Traveler's Call"],
+    ["Gift of False Life", "Knowing Stone", "Summon Spirit", "Traveler's Call","Ashen Relic"],
     ["Awaken the Homuncular Servant", "Blinding the Alloy Eye", "Compel Spirit", "Maw of Ahriman"],
     ["Fortezza Sindonica", "Harrowhaunt", "Host Spirit", "Knit the Veil", "Name of the Father", "Shambling Hordes"],
     ["Befoul Vessel", "Bind the Spirit", "Death Rattle", "Split the Veil"],

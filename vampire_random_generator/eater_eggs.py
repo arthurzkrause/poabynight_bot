@@ -19,4 +19,5 @@ controle_updates = (
     "11/01/24: Atualizado: Nome das disciplinas, README, Informações sobre níveis das disciplinas. Adicionado: níveis de protean",
     "13/01/24: Adicionado: Easter Egg",
     "14/01/24: Atualizado: Disciplinas de Blood Stained Love",
+    "22/01/24: Adicionado: Disciplinas de The Book of Nod Apocrypha",
 )

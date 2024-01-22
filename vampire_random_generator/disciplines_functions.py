@@ -42,8 +42,8 @@ all_discipline = {
     "corrosive vitae":"Turn vitae corrosive. Does not work against unliving flesh, such as other vampires.",
     "shape the sanguine sacrament":	"Shape blood into a shape or image.\nDice: Manipulation + Blood Sorcery.\bthe user uses their vitae, it costs one Rouse Check.",
     "a taste for blood":"Discover traits of another through their blood.\nDice: Resolve + Blood Sorcery",
-    "extinguish vitae":"In use, this increases another Kindred's Hunger.\nDice: Intelligence + Blood Sorcery vs Stamina +Composure\nThe victim can determine who used this power against them if they can see them and win an Intelligence + Occult vs Wits + Subterfuge roll.",
-    "scour ecrets":"Pour through a large amount of content within minutes.\nDice: Intelligence + Blood Sorcery\nThis power does not allow the user to parse things written in a language they cannot understand.",
+    "extinguish vitae":"In use, this increases another Kindred's Hunger.\nDice: Intelligence + Blood Sorcery vs Stamina + Composure\nThe victim can determine who used this power against them if they can see them and win an Intelligence + Occult vs Wits + Subterfuge roll.",
+    "scour secrets":"Pour through a large amount of content within minutes.\nDice: Intelligence + Blood Sorcery\nThis power does not allow the user to parse things written in a language they cannot understand.",
     "blood of potency":"Increase Blood Potency temporarily.\nDice: Resolve + Blood Sorcery\nThis power can allow a Kindred to bypass the Blood Potency limit set by their generation",
     "scorpion's touch":	"Change own vitae into paralyzing poison.\nDice: Strength + Blood Sorcery vs Stamina +Occult/Fortitude\nA mortal who takes any damage from this will go unconscious.",
     "scorpions touch":	"Change own vitae into paralyzing poison.\nDice: Strength + Blood Sorcery vs Stamina +Occult/Fortitude\nA mortal who takes any damage from this will go unconscious.",
@@ -72,6 +72,7 @@ all_discipline = {
     "seal the brand":"Make a tattoo permanent on a vampire.\nDice: Intelligence + Blood Sorcery\nThe process inflicts 1 Superficial damage",
     "wake with evening's freshness":"Awakens the caster at any signs of danger during day sleep.\nDice: Intelligence + Blood Sorcery\n	Do not make the Ritual roll until true danger appears.",
     "ward against ghouls":"Protect themselves against Ghouls.\nDice: Intelligence + Blood Sorcery\nUses standard rules for Wards.",
+    "blood apocrypha":"Embed messages into Blood or vessels.\nDice:	Intelligence + Blood Sorcery\nThe first person receives the message if they are the intended recipient or if they have A Taste For Blood.",
     #lEVEL 2
     "as fog on water":	"Walk on water silently.\nDice: Intelligence + Blood Sorcery\nThis can be ended early or kept to allow them to walk on water for the rest of the night.",
     "calling the aura's remnants":"Speak with the residual aura of someone who has died.\nDice: Intelligence + Blood Sorcery\nThe aura only has memories up to the time of death.",
@@ -274,7 +275,9 @@ all_discipline = {
     "split the veil":"Create a tear into a shroud to allow wraiths to enter.\nDice: Resolve + Oblivion\nPrerequisite: Necrotic Plague\nThis Ceremony reduces the density of the veil and can reduce it to absent, allowing wraiths to come through. The veil increased to frayed after the session ends, stopping any more wraiths.",
     "ex nihilo":"Enter the Shadowlands \nDice: Resolve + Oblivion\nPrerequisite: Withering Spirit\nThe Shadowlands have several rules that do not exist in the world of the living.",
     "lazarene blessing":"Bring a fresh corpse back to life\nDice: Resolve + Oblivion\nPrerequisite: Skuld Fulfilled\nThis lasts until the body dies again or the wraith is exorcised from the host.",
-    "pit of contemplation":	"Cast an enemy into Oblivion itself.\nDice: Resolve + Oblivion\nPrerequisite:Tenebrous Avatar\nMortals sucked in are instantly killed.",
+    "pit of contemplation":	"Cast an enemy into Oblivion itself.\nDice: Resolve + Oblivion\nPrerequisite: Tenebrous Avatar\nMortals sucked in are instantly killed.",
+    "ashen relic":"Preservation of a Kindred's body.\nDice: Resolve + Oblivion\nThree successes in the margin preserves more.",
+    "wisdom of the dead":"Gain information from a corpse skull or head.\nDice: Resolve + Oblivion\nPrerequisite: Ashes to Ashes or Oblivion's Sight.\nAdd two dice to their dice pool if they are still carrying the skull/head for the rest of the night.",
 
     #POTENCE
     'lethal body':'Unarmed attacks do Aggravated Health damage to mortals when used and ignore one level of armor per Potence rating of user.',
