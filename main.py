@@ -111,11 +111,14 @@ async def v5_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         dado_de_fome = int(args[2])
 
         # Verifica se os números são diferentes de zero -------------------------OK
-        if total_de_dados == 0 and dado_de_fome == 0:
-            print("Vai rolar zero dados pra que?")
+        if total_de_dados > 20:
+            await update.message.reply_text("Erika, essa é pra ti. Para de rolar 99999999 dados. Te amo.\n Limite de dados é de 20 dados por rolagem.")
+            return
+        elif total_de_dados == 0 and dado_de_fome == 0:
+            await update.message.reply_text("Vai rolar zero dados pra que?")
             return
         elif total_de_dados == 0:
-            print("Como assim o total de dados é 0 e você quer rolar alguma coisa?")
+            await update.message.reply_text("Como assim o total de dados é 0 e você quer rolar alguma coisa?")
             return
         # Verifica se o dado de fome é zero ------------------------OK
         elif dado_de_fome == 0:

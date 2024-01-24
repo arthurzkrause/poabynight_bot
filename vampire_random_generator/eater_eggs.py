@@ -20,4 +20,5 @@ controle_updates = (
     "13/01/24: Adicionado: Easter Egg",
     "14/01/24: Atualizado: Disciplinas de Blood Stained Love",
     "22/01/24: Adicionado: Disciplinas de The Book of Nod Apocrypha",
+    "23/01/24: Atualizado: Limite de 30 dados por rolagem e mensagem de erro de rolagem",
 )
