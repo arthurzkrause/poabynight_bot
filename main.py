@@ -24,7 +24,6 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
-        'Versão 1.2.5\n'
         'COMANDOS:\n'
         '- /v5 X Y (X= Total de Dados | Y = Total de Dados de Fome)\n'
         '- /character_generator: Gera um personagem aleatório com Skills, Attributes e Disciplinas\n'
@@ -112,7 +111,7 @@ async def v5_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
         # Verifica se os números são diferentes de zero -------------------------OK
         if total_de_dados > 20:
-            await update.message.reply_text("Erika, essa é pra ti. Para de rolar 99999999 dados. Te amo.\n Limite de dados é de 20 dados por rolagem.")
+            await update.message.reply_text("Limite de dados é de 20 dados por rolagem.")
             return
         elif total_de_dados == 0 and dado_de_fome == 0:
             await update.message.reply_text("Vai rolar zero dados pra que?")
