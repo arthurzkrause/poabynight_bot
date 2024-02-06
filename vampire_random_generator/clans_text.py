@@ -53,6 +53,12 @@ Hoje na Anarquia, o Ministério foi primeiramente recusado pela Camarilla, usand
 Suas disciplinas bases são Ofuscação, Presença e Proteanismo.\n\
 A perdição do clã é relacionada com a sua resistência, já que abomina a Luz, seja ela natural ou artificial. A sua variante diz respeito a transgressão, já que qualquer membro do clã sentirá desejo de quebrar as convicções dos outros ao seu redor.",
 
+'ministry':"Ministério, o clã das mentiras, das Serpentes, dos Setitas.\n\
+O clã Ministério gosta de abraçar irreligiosos, heréticos e corruptos, buscando aqueles que desejam destruir ou subverter a religião. O clã não busca corrompê-los, mas procura aqueles que sabem como lidar com a degradação, fraude e erosão da crença cega. Por um lado, são fornecedores que não tem medo de sujar as mãos , por outro, são o núcleo espiritual de muitos grupos de jovens Kindred.\n\
+Hoje na Anarquia, o Ministério foi primeiramente recusado pela Camarilla, usando seu tempo para comungar com o Deus Set na busca de provação ao clã enquanto assumem papeis de libertadores de crenças deletérias.\n\
+Suas disciplinas bases são Ofuscação, Presença e Proteanismo.\n\
+A perdição do clã é relacionada com a sua resistência, já que abomina a Luz, seja ela natural ou artificial. A sua variante diz respeito a transgressão, já que qualquer membro do clã sentirá desejo de quebrar as convicções dos outros ao seu redor.",
+
 'malkaviano':"Malkavianos, os Lunáticos, malucos e oráculos.\n\
 O clã Malkaviano é erroneamente chamado de o clã dos loucos, já que qualquer psiquiatra diagnosticaria os Malkavianos com alguma psicose, ou com todas elas. Suas perturbações advêm de enxergarem um excesso de realidade de uma só vez, compreendendo-a e sentindo-a muito profundamente, as vezes, sendo demais para suportar.\n\
 Hoje na Camarilla, os Malkavianos são conhecidos pela mediunidade e um alto nível de empatia, sendo fascinados pelos indivíduos “quebrados” da sociedade, reforçando a ideia de que nenhum outro Kindred sente-se confortável na presença deste clã.\n\

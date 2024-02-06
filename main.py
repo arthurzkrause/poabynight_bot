@@ -17,8 +17,8 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         'Olá, bem vindo ao Mundo das Trevas!\n- Este é um bot do POA by Night, um projeto de enciclopédia onde você pode descobrir sobre o mundo de RPG criado para o sistema de Vampiro a Máscara especialmente para Porto Alegre, Rio Grande do Sul, Brasil. para mais informações, acesse nossas redes: https://linktr.ee/poabynight\n\n'
 'Aqui você pode:\n'
 '- Jogar dados com o comando /v5\n'
-'- Fazer um personagem aleatório com /character_generator.\n'
-'- Ter informações sobre os clãs e disciplinas ao escrever seus nomes na conversa\n'
+'- Fazer um personagem aleatório com /character_generator (Ficha em inglês).\n'
+'- Ter informações sobre os clãs e disciplinas ao escrever seus nomes em inglês na conversa.\n'
 '- Fica ligado pra mais novidades em breve'
 )
 
@@ -27,10 +27,10 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         'COMANDOS:\n'
         '- /v5 X Y (X= Total de Dados | Y = Total de Dados de Fome)\n'
         '- /character_generator: Gera um personagem aleatório com Skills, Attributes e Disciplinas\n'
-        '- Tenha informações sobre os clãs e disciplinas! É só digitar o nome deles na conversa!\n'
-        '- Quer saber quando foi a última atualização? Digita: updates\n'
-        '- Rolagens para ajudar os Narradores? Digita: Dice Rolls\n'
-        '- Esqueceu como é a rolagem de predador? Que tal: predator type roll\n\n'
+        '- Tenha informações sobre os clãs e disciplinas! É só digitar o nome deles em inglês na conversa!\n'
+        '- Quer saber quando foi a última atualização? Digita: "updates"\n'
+        '- Rolagens para ajudar os Narradores? Digita: "Dice Rolls"\n'
+        '- Esqueceu como é a rolagem de predador? Que tal: "predator type roll"\n\n'
         'Quer mandar alguma ideia de update?\n'
         'https://www.instagram.com/poabynight\n'
         )
@@ -218,10 +218,8 @@ def sort_dice_results(results_list):
     return results_sorted
 
 async def clans_and_disciplines(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text('Quer saber mais sobre os clãs e as suas disciplinas?\nÉ só digitar o nome deles \
-aqui no chat que você vai ter algumas informações sobre eles! \
-Não precisa digitar /clans_and_disciplines!\n\n'
-'As opções são:\nBanu Haqim\nBrujah\nGangrel\nCaitiff\nHecata\nLasombra\nMalkavian\nMinistério\n\
+    await update.message.reply_text('Quer saber mais sobre os clãs e as suas disciplinas?\nÉ só digitar o nome deles aqui no chat que você vai ter algumas informações!\n\nO texto de clãs é uma cópia do que eu escrevi para os vídeos do Tiktok e o texto das disciplinas é uma cópia da wiki oficial. Não precisa digitar /clans_and_disciplines!\n\n'
+'As opções são:\nBanu Haqim\nBrujah\nGangrel\nCaitiff\nHecata\nLasombra\nMalkavian\nMinistry\n\
 Nosferatu\nRavnos\nSalubri\nToreador\nTremere\nTzimisce\nVentrue\nHumanos e Ghouls\
 \n\nVocê também pode conferir informações sobre as disciplinas!\nColoca o nome delas em inglês e vai surgir um texto explicando ela.\nNão, não tá traduzido.'
 )
