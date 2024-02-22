@@ -31,6 +31,8 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         '- Quer saber quando foi a última atualização? Digita: "updates"\n'
         '- Rolagens para ajudar os Narradores? Digita: "Dice Rolls"\n'
         '- Esqueceu como é a rolagem de predador? Que tal: "predator type roll"\n\n'
+        '- Ressonancia? Digita: "resonance"'
+        'A maior parte do conteúdo vem diretamente da Wiki oficial, por isso algumas coisas estão em inglês.'
         'Quer mandar alguma ideia de update?\n'
         'https://www.instagram.com/poabynight\n'
         )
