@@ -14,27 +14,27 @@ BOT_USERNAME
 #Commands
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
-        'Olá, bem vindo ao Mundo das Trevas!\n- Este é um bot do POA by Night, um projeto de enciclopédia onde você pode descobrir sobre o mundo de RPG criado para o sistema de Vampiro a Máscara especialmente para Porto Alegre, Rio Grande do Sul, Brasil. para mais informações, acesse nossas redes: https://linktr.ee/poabynight\n\n'
-'Aqui você pode:\n'
-'- Jogar dados com o comando /v5\n'
-'- Fazer um personagem aleatório com /character_generator (Ficha em inglês).\n'
-'- Ter informações sobre os clãs e disciplinas ao escrever seus nomes em inglês na conversa.\n'
-'- Fica ligado pra mais novidades em breve'
+        'Hello and welcome to the World of Darkness!\n- This is a bot from POA by Night, an encyclopedia project where you can find out more about the RPG world created for the Vampire the Masquerade system for Porto Alegre, Rio Grande do Sul, Brazil. For more information, visit our networks: https://linktr.ee/poabynight\n\n'
+'What you can do:\n'
+'- Play dice with the command /v5\n'
+'- Make a random character with /character_generator.\n'
+'- Get information about clans and disciplines by writing their names in the conversation.\n'
 )
 
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
-        'COMANDOS:\n'
-        '- /v5 X Y (X= Total de Dados | Y = Total de Dados de Fome)\n'
-        '- /character_generator: Gera um personagem aleatório com Skills, Attributes e Disciplinas\n'
-        '- Tenha informações sobre os clãs e disciplinas! É só digitar o nome deles em inglês na conversa!\n'
-        '- Quer saber quando foi a última atualização? Digita: "updates"\n'
-        '- Rolagens para ajudar os Narradores? Digita: "Dice Rolls"\n'
-        '- Esqueceu como é a rolagem de predador? Que tal: "predator type roll"\n\n'
-        '- Ressonancia? Digita: "resonance"'
-        'A maior parte do conteúdo vem diretamente da Wiki oficial, por isso algumas coisas estão em inglês.'
-        'Quer mandar alguma ideia de update?\n'
-        'https://www.instagram.com/poabynight\n'
+        'COMMANDS:\n'
+        '- /v5 X Y (X = Total Dice Pool | Y = Total Hunger Dice)\n'
+        '- /character_generator: Generates a random character with Skills, Attributes and Disciplines.\n'
+        '- Get information about clans and disciplines! Just type their name in the conversation!\n'
+        '- Want to know when the last update was and what I Uptaded? Type: "updates"\n'
+        '- Rolls to help Storytellers? Type: "Dice Rolls"\n'
+        '- Forgot what the predator roll is like? How about: "Predator type roll"\n'
+        '- Resonance? Type: "Resonance"\n'
+	    '- You can type UPPER or lower case.\n\n'
+         'Most of the content comes directly from the official Wiki!'
+         'Do you want to send any update ideas?\n'
+         'https://www.instagram.com/poabynight\n'
         )
 
 async def character_generator(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -70,14 +70,14 @@ async def character_generator(update: Update, context: ContextTypes.DEFAULT_TYPE
                 available_attributes_value.remove(assigned_value)
                 result += f"{attribute}: {assigned_value}\n"
             else:
-                result += f"{attribute}: Sem opções disponíveis\n"
+                result += f"{attribute}: No options available\n"
 
         return result
 
     # SKILLS GENERATOR - usa quase tudo que tá em vampir_random_generator.other_stats
     def skill_generator(category):
         reset_skill_values()
-        result = f"\nSKILLS:\nTipo: {category}\n"
+        result = f"\nSKILLS:\Type: {category}\n"
         values = available_skill_value.get(category, [])
 
         for atributo in skills_all:
@@ -87,7 +87,7 @@ async def character_generator(update: Update, context: ContextTypes.DEFAULT_TYPE
                 values.remove(assigned_value)
                 result += f"{atributo}: {assigned_value}\n"
             else:
-                result += f"{atributo}: Sem opções disponíveis\n"
+                result += f"{atributo}: No options available\n"
         
         return result
 
@@ -113,13 +113,13 @@ async def v5_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
         # Verifica se os números são diferentes de zero -------------------------OK
         if total_de_dados > 20:
-            await update.message.reply_text("Limite de dados é de 20 dados por rolagem.")
+            await update.message.reply_text("Dice limit is 20 dice per roll.")
             return
         elif total_de_dados == 0 and dado_de_fome == 0:
-            await update.message.reply_text("Vai rolar zero dados pra que?")
+            await update.message.reply_text("Why are you going to roll zero dice?")
             return
         elif total_de_dados == 0:
-            await update.message.reply_text("Como assim o total de dados é 0 e você quer rolar alguma coisa?")
+            await update.message.reply_text("What do you mean? The total number of dice is 0 and you still want to roll something?")
             return
         # Verifica se o dado de fome é zero ------------------------OK
         elif dado_de_fome == 0:
@@ -130,7 +130,7 @@ async def v5_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
             ten_critic= double_ten_successes(sorted_total_de_dados)
             successes_dices = sum(1 for roll in result_total_de_dados if int(roll) >= 6)+ten_critic
             
-            response_message = f"Dados: {', '.join(map(str, sorted_total_de_dados))}\nDados de fome: 0\n{successes_dices} sucessos\n"
+            response_message = f"Dices: {', '.join(map(str, sorted_total_de_dados))}\nHunger Dices: 0\n{successes_dices} successes\n"
         # Verifica se o DADO DE FOME é maior que o TOTAL DE DADOS  ------------------- ok
         elif dado_de_fome >= total_de_dados:
             # Se sim, rola o segundo número sem interferências
@@ -141,7 +141,7 @@ async def v5_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
             successes_dices = sum(1 for roll in result_dado_de_fome if int(roll) >= 6)+ten_critic
             bestial = check_for_double_ten(sorted_dados_de_fome)
 
-            response_message = f"Dados: 0\nDados de fome: {', '.join(map(str, sorted_dados_de_fome))}\n{successes_dices} sucessos\n{bestial}"
+            response_message = f"Dices: 0\nHunger Dices: {', '.join(map(str, sorted_dados_de_fome))}\n{successes_dices} successes\n{bestial}"
         else:
             # Se não, rola o primeiro número e pega os últimos num_dice2 resultados
             # TOTAL DE DADOS
@@ -162,18 +162,18 @@ async def v5_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
             # Verifica se há crítico bestial
             bestial = ""
             if 10 in sorted_total_de_dados and 10 in sorted_dados_de_fome:
-                bestial = "Crítico bestial!"
+                bestial = "Messy Critical!"
             elif 1 in sorted_total_de_dados and 1 in sorted_dados_de_fome:
-                bestial = "Fracasso bestial!"
+                bestial = "Bestial Failure!"
 
-            response_message = f"Dados: {', '.join(map(str, sorted_total_de_dados))}\nDados de fome: {', '.join(map(str, sorted_dados_de_fome))}\n{successes_dices} sucessos\n{bestial}"
+            response_message = f"Dices: {', '.join(map(str, sorted_total_de_dados))}\nHunger Dices: {', '.join(map(str, sorted_dados_de_fome))}\n{successes_dices} successes\n{bestial}"
 
             
         await update.message.reply_text(response_message)
 
     else:
         # Mensagem de erro se os argumentos não forem válidos
-        response_message = f"Quer usar os dados?\nJoga no formato '/v5 4 1'!\n\nNo exemplo:\n4 é o Total de Dados\n1 é o Total de Dados de Fome!\n\nO resultado aparecerá como:\nDados: resulto.\nDados de fome: resultado."
+        response_message = f"Do you want to roll the dice?\nPlay in the format '/v5 4 1'!\n\nIn the example:\n4 is the Total Dices\n1 is the Total Hunger Dices!\n\nThe result will appear as:\nTotal dice pool: result.\nHunger Dices: result."
 
         # Responde ao usuário com mensagem de erro
         await update.message.reply_text(response_message)
@@ -202,9 +202,9 @@ def check_for_double_ten(dados):
 def critico_falha_bestial(critic_list):
     #imprime mensagem de crítico
     if 10 in critic_list and 10 in critic_list:
-        crit_message = "Crítico bestial!"
+        crit_message = "Messy Critical"
     elif 1 in critic_list and 1 in critic_list:
-        crit_message = "Fracasso bestial!\n"
+        crit_message = "Bestial Failure!\n"
     return crit_message
     
 def roll_dice(num_dice):
@@ -220,10 +220,8 @@ def sort_dice_results(results_list):
     return results_sorted
 
 async def clans_and_disciplines(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text('Quer saber mais sobre os clãs e as suas disciplinas?\nÉ só digitar o nome deles aqui no chat que você vai ter algumas informações!\n\nO texto de clãs é uma cópia do que eu escrevi para os vídeos do Tiktok e o texto das disciplinas é uma cópia da wiki oficial. Não precisa digitar /clans_and_disciplines!\n\n'
-'As opções são:\nBanu Haqim\nBrujah\nGangrel\nCaitiff\nHecata\nLasombra\nMalkavian\nMinistry\n\
-Nosferatu\nRavnos\nSalubri\nToreador\nTremere\nTzimisce\nVentrue\nHumanos e Ghouls\
-\n\nVocê também pode conferir informações sobre as disciplinas!\nColoca o nome delas em inglês e vai surgir um texto explicando ela.\nNão, não tá traduzido.'
+    await update.message.reply_text('Do you want to know more about the clans and their disciplines?\nJust type their name here in the chat and you will get some information!\n\n'
+'The options are:\nBanu Haqim\nBrujah\nGangrel\nCaitiff\nHecata\nLasombra\nMalkavian\nMinistry\nNosferatu\nRavnos\nSalubri\nToreador\nTremere\nTzimisce\nVentrue\nMortals\n\nDisciplines:\nAnimalism\nAuspex\nBlood Sorcery\nBlood Sorcery Rituals\nCelerity\nDominate\nFortitude\nObfuscate\nOblivion\nOblivion Ceremonies\nPotence\nPresence\nProtean\nThin Blood Alchemy'
 )
 
 #Handle Responses - se o usuário digitar algo que não um comando,o bot devolve algo escrito
@@ -247,7 +245,7 @@ def handle_response(text: str) -> str:
         resultado_formatado = "\n".join(controle_updates)
         return resultado_formatado
     else:
-        return "Digita o nome da disciplina ou do clã que você tem interesse! Tem algumas outras surpresas por aí, não desiste!"    
+        return "Type the name of the discipline or clan you are interested in! There are some other surprises out there, don't give up!"    
   
 #Handling Messages - Diferencia se é grupo ou não.
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):

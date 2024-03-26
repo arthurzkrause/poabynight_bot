@@ -15,17 +15,18 @@ easter_eggs_test = {
     "resonance":"\n\nCholeric\nThe humor of passion and anger but also one of jealousy and violence. This Resonance can, but not exclusively, be found in vessels that have the will to fight back against whatever problems they face\nEmotions: Angry, violent, bullying, passionate or envious.\nDisciplines: Celerity and Potence.\n\nMelancholy\nThe humor of sadness and the downtrodden but also those who seek enlightenment. This Resonance can, but not exclusively, be found in vessels who have lost the will to fight or those who are seized by the gain of knowledge.\nEmotions: Sad, scared, depressed, intellectual, or grounded.\nDisciplines: Fortitude and Obfuscate.\n\nPhlegmatic\nThe humor of those who are calm and relaxed or those who are lost in their own reminiscing. This Resonance can, but not exclusively, be found in vessels who are at peace or can't find a reason to care at the moment.\nEmotions: Lazy, apathetic, calm, controlling, and sentimental.\nDisciplines: Auspex and Dominate.\n\nSanguine\nThe humor of sex and passion but also of happiness and liveliness. This Resonance can, but not exclusively, be found in vessels who have a sexual interest in the vampire or are simply enjoying life itself.\nEmotions: Horny, happy, enthusiastic, addicted, active, and flighty.\nDisciplines: Blood Sorcery and Presence.\n\n'Empty'\nThis Resonance represents those who lack general emotions.\nEmotions: That of sociopaths or the emotionally detached.\nDisciplines: Oblivion.\n\nAnimal Blood\nWhile not a Resonance, it does serve a purpose to vampires. Giving them access to the last two Disciplines of Animalism and Protean. The Storyteller is free to correlate animal blood to the main four Resonances, should they find it important to their chronicle." ,
 }
 
-controle_updates = (
-    "05/01/24: Add: Rolagem de dados",
-    "06/01/24: Add: Gerador de Personagem",
-    "07/01/24: Add: Disciplinas no gerador de personagem",
-    "09/01/24: Add: Informações sobre clãs e disciplinas",
-    "10/01/24: Fix: Rolagem de dados e corrigido limite de idade para Character Generator",
-    "11/01/24: Fix: Nome das disciplinas, README, Informações sobre níveis das disciplinas. Adicionado: níveis de protean",
-    "13/01/24: Add: Easter Egg",
-    "14/01/24: Fix: Disciplinas de Blood Stained Love",
-    "22/01/24: Add: Disciplinas de The Book of Nod Apocrypha",
-    "23/01/24: Fix: Limite de 30 dados por rolagem e mensagem de erro de rolagem",
-    "25/01/24: Add: Easter eggs.",
-    "20/02/24: Add: Resonance",
+control_updates = (
+     "01/05/24: Add: Dice Roll",
+     "06/01/24: Add: Character Generator",
+     "07/01/24: Add: Disciplines in the character generator",
+     "09/01/24: Add: Information about clans and disciplines",
+     "01/10/24: Fix: Dice roll and corrected age limit for Character Generator",
+     "01/11/24: Fix: Name of subjects, README, Information about discipline levels. Add: protean levels",
+     "01/13/24: Add: Easter Egg",
+     "01/14/24: Fix: Blood Stained Love Disciplines",
+     "01/22/24: Add: Book of Nod Apocrypha Disciplines",
+     "01/23/24: Fix: Limit of 20 dice per roll and roll error message",
+     "25/01/24: Add: Easter eggs.",
+     "02/02/24: Add: Resonance",
+     "26/03/24: Add: English translation of all texts."
 )

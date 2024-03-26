@@ -1,24 +1,23 @@
 # @Poabynight_bot
-Bot de Telegram para facilitar narração de RPG Vampiro a Máscara </br>
-[Clica para acessar!](https://t.me/poabynight_bot)
+Telegram bot to assist Vampire the Masquerade RPG gaming </br>
+[Click to access!](https://t.me/poabynight_bot)
 
-# Comandos disponíveis
-### 🎲 /v5 - Rolagem de dados<br/>
-* Informa Total de Dados e Dados de Fome
-* Informa se a relogem foi Crítico ou Falha bestial
-* Soma +2 no resultado caso haja dois 10 na rolagem 
+# Available commands
+### 🎲 /v5 - Dice rolling<br/>
+* Informs Total Dices and Hunger Dices
+* Tells you if it was Messy Critical or Bestial Failure
+* Adds +2 to the result if there are two 10s on the roll
 
-### 🧛 /Character_Generator - Personagens aleatórios
-* Usa as regras do livro oficial
-* Gera Atributos e Skills
-* Calcula Health e Willpower
-* Gera Nome, Idade, Geração, Potência de Sangue e Disciplinas
-    * Ficha gerada em inglês
-    * [Ficha Oficial](https://wodnews.files.wordpress.com/2018/08/charsheet_v5-own-formfillable.pdf)
+### 🧛 /Character_Generator - Random characters
+* Uses the rules from the official book
+* Generates Attributes and Skills
+* Calculates Health and Willpower
+* Generates Name, Age, Generation, Blood Potency and Disciplines
+    * [Official sheet](https://wodnews.files.wordpress.com/2018/08/charsheet_v5-own-formfillable.pdf)
 
-### 📚 /clans and disciplines - Informativo
-* Retorna ao usuário informações sobre os Clãs e Disciplinas
-    * Basta digitar na conversa e.g "Ventrue" ou "Cloud Memory"
+### 📚 /clans and disciplines - Informative
+* Returns information about Clans and Disciplines
+* Just type in the conversation e.g "Ventrue" or "Cloud Memory"
 
 # 
 ⚖️👊🐺🧩⚰️🌑🪞🐍🎭🧭👁️🌹🔮🐲👑🩸🪢👥
