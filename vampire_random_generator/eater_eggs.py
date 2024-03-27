@@ -35,8 +35,8 @@ controle_updates = (
      "01/14/24: Fix: Blood Stained Love Disciplines",
      "01/22/24: Add: Book of Nod Apocrypha Disciplines",
      "01/23/24: Fix: Limit of 20 dice per roll and roll error message",
-     "25/01/24: Add: Easter eggs.",
+     "25/01/24: Add: Easter eggs",
      "02/02/24: Add: Resonance",
-     "26/03/24: Add: English translation of all texts."
-     "27/03/24: Fix: English translation"
+     "26/03/24: Add: English translation of all texts"
+     "27/03/24: Fix: English translation. Add: Easter Eggs"
 )
