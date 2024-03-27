@@ -219,9 +219,8 @@ def sort_dice_results(results_list):
 
     return results_sorted
 
-async def clans_and_disciplines(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text('Do you want to know more about the clans and their disciplines?\nJust type their name here in the chat and you will get some information!\n\n'
-'The options are:\nBanu Haqim\nBrujah\nGangrel\nCaitiff\nHecata\nLasombra\nMalkavian\nMinistry\nNosferatu\nRavnos\nSalubri\nToreador\nTremere\nTzimisce\nVentrue\nMortals\n\nDisciplines:\nAnimalism\nAuspex\nBlood Sorcery\nBlood Sorcery Rituals\nCelerity\nDominate\nFortitude\nObfuscate\nOblivion\nOblivion Ceremonies\nPotence\nPresence\nProtean\nThin Blood Alchemy'
+async def clans_disciplines(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text('Do you want to know more about the clans and their disciplines?\nJust type their name here in the chat and you will get some information!\n\nThe options are:\n- Banu Haqim\n- Brujah\n- Gangrel\n- Caitiff\n- Hecata\n- Lasombra\n- Malkavian\n- Ministry\n- Nosferatu\n- Ravnos\n- Salubri\n- Toreador\n- Tremere\n- Tzimisce\n- Ventrue\n- Mortals\n\nDisciplines:\n- Animalism\n- Auspex\n- Blood Sorcery\n- Blood Sorcery Rituals\n- Celerity\n- Dominate\n- Fortitude\n- Obfuscate\n- Oblivion\n- Oblivion Ceremonies\n- Potence\n- Presence\n- Protean\n- Thin Blood Alchemy'
 )
 
 #Handle Responses - se o usuário digitar algo que não um comando,o bot devolve algo escrito
@@ -277,7 +276,7 @@ if __name__ == '__main__':
     app.add_handler(CommandHandler('help',help_command))
     app.add_handler(CommandHandler('v5',v5_command))
     app.add_handler(CommandHandler('character_generator',character_generator))
-    app.add_handler(CommandHandler('clans',clans_and_disciplines))
+    app.add_handler(CommandHandler('clans_disciplines',clans_disciplines))
 
     #Messages
     app.add_handler(MessageHandler(filters.TEXT,handle_message))
