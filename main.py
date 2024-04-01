@@ -6,7 +6,7 @@ from telegram.ext import Application, CommandHandler, MessageHandler, filters, C
 from tokentoken.token_username import TOKEN,BOT_USERNAME
 from vampire_random_generator.disciplines_functions import all_discipline
 from vampire_random_generator.clans_text import clan_description
-from vampire_random_generator.eater_eggs import easter_eggs_test, controle_updates
+from vampire_random_generator.eater_eggs import easter_eggs_test, controle_updates, feedingComplications1, feedingComplications2
 
 TOKEN
 BOT_USERNAME
@@ -27,10 +27,11 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         '- /v5 X Y (X = Total Dice Pool | Y = Total Hunger Dice)\n'
         '- /character_generator: Generates a random character with Skills, Attributes and Disciplines.\n'
         '- Get information about clans and disciplines! Just type their name in the conversation!\n'
-        '- Want to know when the last update was and what I Uptaded? Type: "updates"\n'
-        '- Rolls to help Storytellers? Type: "Dice Rolls"\n'
-        '- Forgot what the predator roll is like? How about: "Predator type roll"\n'
-        '- Resonance? Type: "Resonance"\n'
+        '- /updates show what and when something was introduced\n'
+        '- /dice_rolls has some rolls that can help the storytelling\n'
+        '- /predator_type_roll inform about the rouls to hunt.\n'
+        '- /resonance to know more about the mechanic\n'
+        '- /feeding_complications to know more about how can you mess the feeding\n'
 	    '- You can type UPPER or lower case.\n\n'
          'Most of the content comes directly from the official Wiki!'
          'Do you want to send any update ideas?\n'
@@ -223,6 +224,29 @@ async def clans_disciplines(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text('Do you want to know more about the clans and their disciplines?\nJust type their name here in the chat and you will get some information!\n\nThe options are:\n- Banu Haqim\n- Brujah\n- Gangrel\n- Caitiff\n- Hecata\n- Lasombra\n- Malkavian\n- Ministry\n- Nosferatu\n- Ravnos\n- Salubri\n- Toreador\n- Tremere\n- Tzimisce\n- Ventrue\n- Mortals\n\nDisciplines:\n- Animalism\n- Auspex\n- Blood Sorcery\n- Blood Sorcery Rituals\n- Celerity\n- Dominate\n- Fortitude\n- Obfuscate\n- Oblivion\n- Oblivion Ceremonies\n- Potence\n- Presence\n- Protean\n- Thin Blood Alchemy'
 )
 
+#Updates - controle de atualizações - vampire_random_generator / easter_eggs
+async def updates(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    resultado_formatado = "\n".join(controle_updates) 
+    await update.message.reply_text(resultado_formatado)
+
+#Dice rolls, inform the Narrator about some mechanics
+async def dice_rolls(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text("Frenzy\nWillpower + (Humanity/3)(rounded down)\n\nAutomatic Wins\nPlayer's dice pool is double the challenge\n\nWinning at a cost\nRoll that includes successes, but fails. You may achieve your goal, but at some cost.\n\nTake Half\nDivide your total dice in half (round down). This will be your number of successes.\n\nMultiple opponents\nLose one die for each successive action in the same turn.\n\nExtended test\nCan be used between characters\nHigh difficulty test with cumulative rolls.\nE.g Getting your hands on a relic requires three wins for each task:\nInt + Larceny - overcome alarm \nDex + Stealth - Invade location through skylight\nComposure + Stealth - Extract relic from security laser\n\nSingle roll\nIf after 3 turns of combat and the question 'Will anything dramatically change with more interactions?' if not:\n- Difficulty 3 if the players won the last turn.\n- Difficulty 4 if they suffered the same as the npc\- Difficulty 5 if the NPC won the last turn\n- Difficulty 6 if the players were lucky to be alive.\n\nManeuver\nThe character studies the opponent and moves to a place of advantage, or a critical point. Bonus of 1-3 dice.\n\nTotal Attack\n+1 damage, but cannot defend any attack. If it is a Ranged Weapon, discharge the weapon. (Even if the NPC has more successes, he will still take all the damage.)\n\nTotal Defense\nCharacter just wants to survive. Gains a bonus die on all defense rolls. If you are in good cover, if become immune to ranged attacks, as long as you are not flanked (maneuver). Can only perform minor actions.")
+
+#Resonance, inform about the mecanic of resonances
+async def resonance(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text("Choleric\nThe humor of passion and anger but also one of jealousy and violence. This Resonance can, but not exclusively, be found in vessels that have the will to fight back against whatever problems they face\n- Emotions: Angry, violent, bullying, passionate or envious.\n- Disciplines: Celerity and Potence.\n\nMelancholy\nThe humor of sadness and the downtrodden but also those who seek enlightenment. This Resonance can, but not exclusively, be found in vessels who have lost the will to fight or those who are seized by the gain of knowledge.\n- Emotions: Sad, scared, depressed, intellectual, or grounded.\n- Disciplines: Fortitude and Obfuscate.\n\nPhlegmatic\nThe humor of those who are calm and relaxed or those who are lost in their own reminiscing. This Resonance can, but not exclusively, be found in vessels who are at peace or can't find a reason to care at the moment.\n- Emotions: Lazy, apathetic, calm, controlling, and sentimental.\n- Disciplines: Auspex and Dominate.\n\nSanguine\nThe humor of sex and passion but also of happiness and liveliness. This Resonance can, but not exclusively, be found in vessels who have a sexual interest in the vampire or are simply enjoying life itself.\n- Emotions: Horny, happy, enthusiastic, addicted, active, and flighty.\n- Disciplines: Blood Sorcery and Presence.\n\n'Empty'\nThis Resonance represents those who lack general emotions.\n- Emotions: That of sociopaths or the emotionally detached.\n- Disciplines: Oblivion.\n\nAnimal Blood\nWhile not a Resonance, it does serve a purpose to vampires. Giving them access to the last two Disciplines of Animalism and Protean. The Storyteller is free to correlate animal blood to the main four Resonances, should they find it important to their chronicle.")
+
+#predator_type_roll inform the rolls to hunt
+async def predator_type_roll(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text("Alleycat\n - Strength + Brawl is to take blood by force or threat. Wits + Streetwise can be used to find criminals as if a vigilante figure.\n\nBagger - Intelligence + Streetwise can be used to find, gain access and purchase the goods.\n\nBlood Leech\n - This Predator Type is suggested to not be abstracted down to a dice pool.\n\nCleaver\n - Manipulation + Subterfuge is used to condition the victims, socializing with them and feeding from them without the cover being blown.\n\nConsensualist\n - Manipulation + Persuasion allows the kindred to take blood by consent, under the guide of medical work or mutual kink.\n\nFarmer\n - Composure + Animal Ken is the roll to find and catch the chosen animal.\n\nOsiris\n - Manipulation + Subterfuge or Intimidation + Fame are both used to feed from the adoring fans.\n\nSandman\n - Dexterity + Stealth is for casing a location, breaking in and feeding without leaving a trace.\n\nScene Queen\n - Manipulation + Persuasion aids in feeding from those within the Kindred's subgroup, through conditioning and isolation to gain blood or gaslighting or forced silence.\n\nSiren\n - Charisma + Subterfuge is how sirens feed under the guise of sexual acts.\n\nExtortionist\n - Strength/Manipulation + Intimidation to feed through coercion.\n\nGraverobber\n - Resolve + Medicine for sifting through the dead for a body with blood. Manipulation + Insight for moving among miserable mortals.\n\nRoadside Killer\n - Dexterity/Charisma + Drive to feed by picking up down and outs with no other options.\n\nGrim Reaper\n - Intelligence + Awareness/Medicine in order to find victims.\n\nMontero\n - Intelligence + Stealth represents the expert planning of well-trained Retainers. Whereas a well-practiced plan and patient waiting is represented by Resolve + Stealth\n\nPursuer\n - Intelligence + Investigation to locate and find a victim no one will notice is gone. Stamina + Stealth for long stalking of unaware urban victims.\n\nTrapdoor\n - Charisma + Stealth for the victims that enter expecting a fun-filled night. Dexterity + Stealth to feed upon trespassers. Wits + Awareness + Haven dots is used to navigate the maze of the den itself.")
+
+async def feeding_complications(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    resultado_formatado = "\n".join(feedingComplications1) 
+    await update.message.reply_text(resultado_formatado)
+    resultado_formatado = "\n".join(feedingComplications2) 
+    await update.message.reply_text(resultado_formatado)
+
 #Handle Responses - se o usuário digitar algo que não um comando,o bot devolve algo escrito
 def handle_response(text: str) -> str:
     processed: str = text.lower()
@@ -239,10 +263,6 @@ def handle_response(text: str) -> str:
         processed_upper = processed.upper()
         return f'{processed_upper}:\n{all_discipline[processed]}'
     
-    #Updates - controle de atualizações - vampire_random_generator / easter_eggs
-    elif "updates" in processed:
-        resultado_formatado = "\n".join(controle_updates)
-        return resultado_formatado
     else:
         return "Type the name of the discipline or clan you are interested in! There are some other surprises out there, don't give up!"    
   
@@ -277,6 +297,11 @@ if __name__ == '__main__':
     app.add_handler(CommandHandler('v5',v5_command))
     app.add_handler(CommandHandler('character_generator',character_generator))
     app.add_handler(CommandHandler('clans_disciplines',clans_disciplines))
+    app.add_handler(CommandHandler('updates',updates))
+    app.add_handler(CommandHandler('dice_rolls',dice_rolls))
+    app.add_handler(CommandHandler('resonance',resonance))
+    app.add_handler(CommandHandler('predator_type_roll',predator_type_roll))
+    app.add_handler(CommandHandler('feeding_complications',feeding_complications))
 
     #Messages
     app.add_handler(MessageHandler(filters.TEXT,handle_message))
