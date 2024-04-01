@@ -19,5 +19,20 @@ Telegram bot to assist Vampire the Masquerade RPG gaming </br>
 * Returns information about Clans and Disciplines
 * Just type in the conversation e.g "Ventrue" or "Cloud Memory"
 
+### 🗓️ /updates - Informative
+* Returns information about the updates since the beginning.
+
+### 🤷‍♀️ /dice_rolls - Informative
+* Returns information about the uncommon dice rolls to help the narrator.
+
+### 🩸 /resonance - Informative
+* Returns information about the resonance and how they can interfere on disciplines.
+
+### 🎯 /predator_type - Informative
+* Returns information about the predator types and which dice poll you should use when hunting.
+
+### 😈 /feeding_complications - Informative
+* Returns information about how the narrator can complicate the hunt of each predator type.
+
 # 
 ⚖️👊🐺🧩⚰️🌑🪞🐍🎭🧭👁️🌹🔮🐲👑🩸🪢👥
