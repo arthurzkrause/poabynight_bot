@@ -16,6 +16,7 @@ easter_eggs_test = {
     'humanity':"We are monsters. We are monsters to the point of creating a scale to measure our humanity. The most interesting thing is that on a scale of 0 to 10, most Kindred stabilize at grade 5, neither beast nor human. They say we start with 7, but who am I to question the humanity of a body that is still warm, that is nourished by the sun and smiles when the day is over. We are monsters, regardless of this classification, and even the holiest can be morally corrupt (this one's for you Salubri).\nAs we get older, time corrupts us and connections with life are lost when everyone we know is dead. When we see, a corpse is just another corpse and thus, we go down a step in humanity.",
     
     "final death":"It's your second death. It's your real goodbye. But don't be scared, you've already died as a human, now as Kindred, but there's still one more death to go. When everyone who once knew you forgets who you are.",
+    "social conflicts" :"Threat\n- Manipulation/Composure + Intimidation\nExposure\n- Wits  + Persuasion\nDefamation\n- Manipulation + Subterfuge\nIntimidation\n- Strength/Manipulation + Intimidation\nSlander\n- Charisma/Wits + Subterfuge\nBlackmail\n- Intelligence/Manipulation + Streetwise\nNegotiation\n- Resolve + Persuasion\nContestation\n- Intelligence + Persuasion\nPacify\n- Composure/Resolve + Insight\nSeduction\n- Charisma + Persuasion/Subterfuge\nPerjury\n- Resolve + Insight\nSuperiority\n- Charisma + Leadership\nRefutation\n- Intelligence + Persuasion\nBlackmail\n- Charisma + Persuasion\nAssistance: Incite\n- +1 Dice\nAssistance: Boo\n- -1 Dice\nAssistance: Intimidation\n- Minus Half Intimidation in Dices\nAssistance: Slander\n- Minus Half Subterfuge in Dices",
 }
 
 feedingComplications1 = ("Alleycat\n- Never Easy: The predator falls while closing in on their prey, alerting the target who then retaliates. The player must fight the prey to feed, with the risk of a failure resulting in the prey escaping and potentially causing a breach of the masquerade.\n- Bait and Switch: The prey turns out to be hunting the predator instead, armed with a rifle. The player must decide whether to flee or confront the threat, with a test of composure and awareness to locate the shooter.\n- Undercover: The predator attacks a seemingly easy target, only to realize they are an undercover cop with body armor and a firearm. The player must decide whether to retreat or engage, to evade capture or further conflict.\n",
@@ -45,5 +46,6 @@ controle_updates = (
      "02/02/24: Add: Resonance",
      "26/03/24: Add: English translation of all texts",
      "27/03/24: Fix: English translation. Add: Easter Eggs",
-     "01/04/24: Fix: Async options"
+     "01/04/24: Fix: Async options",
+     "17/04/24: Fix: dice_rolls text"
 )
