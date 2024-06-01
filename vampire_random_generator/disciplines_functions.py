@@ -219,7 +219,7 @@ all_discipline = {
     "unseen passage":"The user can now move while remaining hidden. This power will fail if the user is being actively watched when activated.",
     "ventriloquism":"Throw their voice so only the intended recipient can hear it.\nDice: Wits + Obfuscate vs Resolve + Composure\nAmalgam: Auspex ●●\nCan be used on anyone in line of sight.",
     "doubletalk":"Say one thing but convey something else in secret.\nDice: Composure + Obfuscate vs Wits + Auspex\nAmalgam: 	Auspex ●.Others present can contest.",
-    "fata norgana":	"Elaborate hallucinations.\nDice: Manipulation + Obfuscate\Amalgam: Presence ●●\nIf the hallucination can trigger Frenzy, give the test at 1 diff lower than the real thing.",
+    "fata morgana":	"Elaborate hallucinations.\nDice: Manipulation + Obfuscate\Amalgam: Presence ●●\nIf the hallucination can trigger Frenzy, give the test at 1 diff lower than the real thing.",
     "ghost in the machine":	"Allows the effects of Obfuscate to be transmitted through technology when viewed on a live screen. 	If viewed later the image seems blurred, making identification harder.",
     "mask of a thousand faces":	"Make themselves appear as a mundane face rather than disappear allowing interaction and communication. This power allows them to interact and speak to others around them.",
     "mask of isolation":"Force Mask of a Thousand Faces onto a victim.\nDice: Manipulation + Obfuscate vs Charisma + Insight\nAmalgam: Dominate ●\nPrerequisite: Mask of a Thousand Faces\nShould the user be made aware of the power being used on them the effects end.",

@@ -32,6 +32,7 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         '- /predator_type_roll inform about the rouls to hunt.\n'
         '- /resonance to know more about the mechanic\n'
         '- /feeding_complications to know more about how can you mess the feeding\n'
+        '- Try "social conflicts"'
 	    '- You can type UPPER or lower case.\n\n'
          'Most of the content comes directly from the official Wiki!'
          'Do you want to send any update ideas?\n'
