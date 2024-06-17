@@ -32,11 +32,13 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         '- /predator_type_roll inform about the rouls to hunt.\n'
         '- /resonance to know more about the mechanic\n'
         '- /feeding_complications to know more about how can you mess the feeding\n'
-        '- Try "social conflicts"'
+        '- Try "social conflicts"\n'
 	    '- You can type UPPER or lower case.\n\n'
-         'Most of the content comes directly from the official Wiki!'
-         'Do you want to send any update ideas?\n'
-         'https://www.instagram.com/poabynight\n'
+        'PS:\n'
+        "In a group chat, you won't be able to search for disciplines nor clans, only commands"
+        'Most of the content comes directly from the official Wiki!\n'
+        'Do you want to send any update ideas?\n'
+        'https://www.instagram.com/poabynight\n'
         )
 
 async def character_generator(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -79,7 +81,7 @@ async def character_generator(update: Update, context: ContextTypes.DEFAULT_TYPE
     # SKILLS GENERATOR - usa quase tudo que tá em vampir_random_generator.other_stats
     def skill_generator(category):
         reset_skill_values()
-        result = f"\nSKILLS:\Type: {category}\n"
+        result = f"\nSKILLS:\nType: {category}\n"
         values = available_skill_value.get(category, [])
 
         for atributo in skills_all:
