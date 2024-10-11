@@ -12,7 +12,7 @@ animalism = [
     ["Feral Whispers","Atavism","Feral Whispers"],
     ["Messenger's Command", "Animal Succulence", "Plague of Beasts", "Quell the Beast", "Scent of Prey", "Unliving Hive"],
     ["Subsume the Spirit", "Sway the Flock"],
-    ["Animal Dominion","Coax the Bestial Temper", "Drawing Out the Beast"]
+    ["Animal Dominion","Coax the Bestial Temper", "Drawing Out the Beast","Spirit Walk"]
 ]
 
 auspex = [
@@ -26,7 +26,7 @@ auspex = [
 
 blood_sorcery = [
     ["Blood Sorcery"],
-    ["Corrosive Vitae", "Shape the Sanguine Sacrament", "A Taste for Blood", "Koldunic Sorcery"],
+    ["Corrosive Vitae", "Shape the Sanguine Sacrament", "A Taste for Blood", "Koldunic Sorcery","Blood's Curse"],
     ["Extinguish Vitae", "Scour Secrets"],
     ["Blood of Potency", "Scorpion's Touch", "Transitive Bond","Ripples of the Heart"],
     ["Theft of Vitae", "Blood Aegis"],
@@ -37,7 +37,7 @@ blood_sorcery_rituals = [
     ["Blood Sorcery Rituals"],
     ["Astromancy", "Beelzebeatit", "Bind the Accusing Tongue", "Blood Walk", "Bloody Message", "Clinging of the Insect", 
      "Coax the Garden", "Craft Bloodstone", "Douse the Fear", "Enrich the Blood", "Herd Ward (Minor)", "Letter Ward", 
-     "Seal the Brand", "Wake with Evening's Freshness", "Ward Against Ghouls", "Blood Apocrypha"],
+     "Seal the Brand", "Wake with Evening's Freshness", "Ward Against Ghouls", "Blood Apocrypha","Blood to Water","Revealing the Crimson Trail"],
     ["As Fog on Water", "Calling the Aura's Remnants", "Calix Secretus", "Communicate with Kindred Sire", "Craftmaster", 
      "Depths of Nightmare", "Elemental Grasp", "Enhance Dyscrasia", "Eyes of Babel", "Illuminate Trail of Prey", "Le Sang de l'Amour", 
      "Soporific Touch", "Silentia Mortis", "Shroud of Silence", "Tiamat Glistens", "Truth of Blood", "Unseen Underground", 
@@ -49,14 +49,14 @@ blood_sorcery_rituals = [
      "The Unseen Change", "Trespass", "Viral Haruspex", "Ward against Lupines", "Warding Circle against Spirits"],
     ["Compel the Inanimate", "Defense of the Sacred Haven", "Egregore Consultation", "Eyes of the Nighthawk", "Feast of Ashes", 
      "Guided Memory", "Incorporeal Passage", "Innocence of the Child's Heart", "Invisible Chains of Binding", "Land's Sustenance",
-     "Rending the Sweet Earth", "Riding the Earth's Vein", "Protean Curse", "Ward against Cainites", "Warding Circle against Lupines"],
+     "Rending the Sweet Earth", "Riding the Earth's Vein", "Protean Curse", "Ward against Cainites", "Warding Circle against Lupines","Innocence's Veil"],
     ["Antebrachia Ignium", "Dominion", "Eden's Bounty", "Elemental Attack", "Escape to True Sanctuary", "Fisher King", 
-     "Heart of Stone", "Shaft of Belated Dissolution", "Simulacrum Gate", "Transferring the Soul", "Warding Circle against Cainites"]
+     "Heart of Stone", "Shaft of Belated Dissolution", "Simulacrum Gate", "Transferring the Soul", "Warding Circle against Cainites","Atrocity's Release","Reawakened Vigor"]
 ]
 
 celerity = [
     ["Celerity"],
-    ["Cat's Grace", "Rapid Reflexes"],
+    ["Cat's Grace", "Rapid Reflexes","Fluent Swiftness"],
     ["Fleetness", "Rush Job"],
     ["Blink", "Traversal", "Weaving"],
     ["Blurred Momentum", "Draught of Elegance", "Unerring Aim", "Unseen Strike"],
@@ -69,12 +69,12 @@ dominate = [
     ["Mesmerize", "Dementation", "Domitor's Favor"],
     ["Forgetful Mind", "Submerged Directive"],
     ["Ancestral Dominion", "Implant Suggestion", "Rationalize", "Tabula Rasa"],
-    ["Mass Manipulation", "Terminal Decree"]
+    ["Mass Manipulation", "Terminal Decree","Lethe's Call"]
 ]
 
 fortitude = [
     ["Fortitude"],
-    ["Resilience", "Unswayable Mind"],
+    ["Resilience", "Unswayable Mind","Fluent Endurance"],
     ["Earth's Perseverance", "Enduring Beasts", "Invigorating Vitae", "Obdurate", "Toughness"],
     ["Defy Bane", "Fortify the Inner Façade", "Seal the Beast's Maw", "Valeren"],
     ["Draught of Endurance", "Gorgon's Scales", "Shatter"],
@@ -82,8 +82,8 @@ fortitude = [
 ]
 obfuscate = [
     ["Obfuscate"],
-    ["Cloak of Shadows", "Silence of Death"],
-    ["Chimerstry", "Ghost's Passing", "Unseen Passage", "Ventriloquism","Doubletalk"],
+    ["Cloak of Shadows", "Silence of Death","Ensconce"],
+    ["Chimerstry", "Ghost's Passing", "Unseen Passage", "Ventriloquism","Doubletalk","Cache"],
     ["Fata Morgana", "Ghost in the Machine", "Mask of a Thousand Faces", "Mask of Isolation", "Mental Maze", "Mind Masque"],
     ["Conceal", "Vanish"],
     ["Cloak the Gathering", "Imposter's Guise"]
@@ -134,14 +134,14 @@ oblivion_ceremonies = [
     ["Oblivion Ceremonies"],
     ["Gift of False Life", "Knowing Stone", "Summon Spirit", "Traveler's Call","Ashen Relic"],
     ["Awaken the Homuncular Servant", "Blinding the Alloy Eye", "Compel Spirit", "Maw of Ahriman"],
-    ["Fortezza Sindonica", "Harrowhaunt", "Host Spirit", "Knit the Veil", "Name of the Father", "Shambling Hordes"],
+    ["Fortezza Sindonica", "Harrowhaunt", "Host Spirit", "Knit the Veil", "Name of the Father", "Shambling Hordes","Shallow Slumber"],
     ["Befoul Vessel", "Bind the Spirit", "Death Rattle", "Split the Veil"],
     ["Ex Nihilo", "Lazarene Blessing", "Pit of Contemplation"]
 ]
 
 potence = [
     ["Potence"],
-    ["Lethal Body", "Soaring Leap"],
+    ["Lethal Body", "Soaring Leap","Fluent Strength"],
     ["Prowess", "Relentless Grasp"],
     ["Brutal Feed","Spark of Rage","Uncanny Grip", "Wrecker"],
     ["Draught of Might", "Crash Down"],
@@ -163,7 +163,7 @@ protean = [
     ["Feral Weapons","Serpent's Kiss","The False Sip"],
     ["Earth Meld", "Shapechange", "Visceral Absorption"],
     ["Metamorphosis"],
-    ["The Heart of Darkness", "Mist Form", "One with the Land", "The Unfettered Heart"]
+    ["The Heart of Darkness", "Mist Form", "One with the Land", "The Unfettered Heart","Blood Form"]
 ]
 protean_tzimisce = [
     ["Protean"],

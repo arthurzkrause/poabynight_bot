@@ -48,5 +48,6 @@ controle_updates = (
      "26/03/24: Add: English translation of all texts",
      "27/03/24: Fix: English translation. Add: Easter Eggs",
      "01/04/24: Fix: Async options",
-     "17/04/24: Fix: dice_rolls text"
+     "17/04/24: Fix: dice_rolls text",
+     "11/10/24: Fix Fata Morgana. Add: Gehenna War Disciplines"
 )

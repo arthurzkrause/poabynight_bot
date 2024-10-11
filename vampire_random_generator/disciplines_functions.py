@@ -18,6 +18,7 @@ all_discipline = {
     'animal sominion':'Command flocks or packs of animals.\nDice: Charisma + Animalism\nThis power does not summon animals, instead utilizing those already present.',
     'coax the bestial temper':'Either increase or decrease the Difficulty to resist Frenzy for vampires nearby.\nDice: Manipulation + Animalism\nEach success of margin increases or decreases the difficulty',
     'drawing out the beast':'Transfer their terror or fury frenzy to a nearby victim.\nDice: Wits + Animalism\nThis power cannot transfer Hunger Frenzy.',
+    'spirit walk':"Extends Subsume the Spirit to transfer the vampire's consciousness from one animal to another without retreating to their own body.\nPrerequisite: Subsume the Spirit\nThe duration is as though a critical success was rolled.",
 
     #AUSPEX
     'heightened senses':'Enhance vampiric senses and add Auspex rating to all perception rolls.\nDice: Wits + Resolve\nHaving the power activated for long periods might require the use of Willpower.',
@@ -41,6 +42,9 @@ all_discipline = {
     #BLOOD SORCERY
     "corrosive vitae":"Turn vitae corrosive. Does not work against unliving flesh, such as other vampires.",
     "shape the sanguine sacrament":	"Shape blood into a shape or image.\nDice: Manipulation + Blood Sorcery.\bthe user uses their vitae, it costs one Rouse Check.",
+    "blood's curse":"Temporary increase another vampire's Bane Severity.\nDice: Intelligence + Blood Sorcery vs Stamina + Occult/Fortitude.\nIf the target is a ghoul, thinblood, or Caitiff they get a clan bane.",
+    "bloods curse":"Temporary increase another vampire's Bane Severity.\nDice: Intelligence + Blood Sorcery vs Stamina + Occult/Fortitude.\nIf the target is a ghoul, thinblood, or Caitiff they get a clan bane.",
+    "blood curse":"Temporary increase another vampire's Bane Severity.\nDice: Intelligence + Blood Sorcery vs Stamina + Occult/Fortitude.\nIf the target is a ghoul, thinblood, or Caitiff they get a clan bane.",
     "a taste for blood":"Discover traits of another through their blood.\nDice: Resolve + Blood Sorcery",
     "extinguish vitae":"In use, this increases another Kindred's Hunger.\nDice: Intelligence + Blood Sorcery vs Stamina + Composure\nThe victim can determine who used this power against them if they can see them and win an Intelligence + Occult vs Wits + Subterfuge roll.",
     "scour secrets":"Pour through a large amount of content within minutes.\nDice: Intelligence + Blood Sorcery\nThis power does not allow the user to parse things written in a language they cannot understand.",
@@ -73,6 +77,9 @@ all_discipline = {
     "wake with evening's freshness":"Awakens the caster at any signs of danger during day sleep.\nDice: Intelligence + Blood Sorcery\n	Do not make the Ritual roll until true danger appears.",
     "ward against ghouls":"Protect themselves against Ghouls.\nDice: Intelligence + Blood Sorcery\nUses standard rules for Wards.",
     "blood apocrypha":"Embed messages into Blood or vessels.\nDice:	Intelligence + Blood Sorcery\nThe first person receives the message if they are the intended recipient or if they have A Taste For Blood.",
+    "blood to water":"Turn blood into water.\nDice: Intelligence + Blood Sorcery\nRemoves all traces of blood.",
+    "revealing the crimson trail":"Reveal traces of spilled blood.\nDice: Intelligence + Blood Sorcery\nVery old traces require a Resolve + Awareness test.",
+
     #lEVEL 2
     "as fog on water":	"Walk on water silently.\nDice: Intelligence + Blood Sorcery\nThis can be ended early or kept to allow them to walk on water for the rest of the night.",
     "calling the aura's remnants":"Speak with the residual aura of someone who has died.\nDice: Intelligence + Blood Sorcery\nThe aura only has memories up to the time of death.",
@@ -144,6 +151,12 @@ all_discipline = {
     "protean curse":"Transform a target into a bat similar to Metamorphosis.\nDice: Intelligence + Blood Sorcery\nThis cannot be used on the caster.",
     "ward against cainites":"Protects themselves against Kindred.\nDice: Intelligence + Blood Sorcery\nUses standard rules for Wards. A vampire examining this ward may read the name of the caster with an Intelligence + Auspex vs Intelligence + Blood Sorcery roll.",
     "warding circle against lupines":"Protects themselves against Werewolves.\nDice: Intelligence + Blood Sorcery\nUses standard rules for Wards.",
+    "innocence's veil":"Temporarily make traces of Diablerie undetectable.\nNo Dice pool.\nCannot be detected by A Taste for Blood or Scry The Soul",
+    "innocence veil":"Temporarily make traces of Diablerie undetectable.\nNo Dice pool.\nCannot be detected by A Taste for Blood or Scry The Soul",
+    "innocences veil":"Temporarily make traces of Diablerie undetectable.\nNo Dice pool.\nCannot be detected by A Taste for Blood or Scry The Soul",
+
+
+
     #LEVEL 5
     "antebrachia ignium":"Set their arms on fire\nDice: Intelligence + Blood Sorcery\nThe user is only resistant to fire on their arms.",
     "dominion":	"Stop the use of Animalism, Auspex, Dominate, and Presence within a building.\nDice: Intelligence + Blood Sorcery\nThe area of effect is determined by the amount of Rouse Checks.",
@@ -157,10 +170,15 @@ all_discipline = {
     "simulacrum gate":"Create a gate to teleport multiple vampires.\nDice: Intelligence + Blood Sorcery\nThere is only one of these known to exist currently.",
     "transferring the soul":"Take over a body from diablerie.\nDice: Intelligence + Blood Sorcery e Intelligence + Oblivion\nPrerequisite:	Another Kindred who knows Oblivion ●●●●●.\nIt is possible to be done by one Kindred who possess level 5 in both powers.",
     "warding circle against cainites":"Protects themselves against Kindred.\nDice: Intelligence + Blood Sorcery\nUses standard rules for Wards.",
+    "atrocity's release":"Reverses the effects of Diablerie.\nDice: Intelligence + Blood Sorcery\nCan be resisted with a Resolve + Blood Sorcery test.",
+    "atrocitys release":"Reverses the effects of Diablerie.\nDice: Intelligence + Blood Sorcery\nCan be resisted with a Resolve + Blood Sorcery test.",
+    "atrocity release":"Reverses the effects of Diablerie.\nDice: Intelligence + Blood Sorcery\nCan be resisted with a Resolve + Blood Sorcery test.",
+    "reawakened vigor":"Regain blood potency faster after extended torpor.\nNo dice pool.\nInflicts aggravated damage to anyone other than the caster.	",
 
     #CELERITY
     "cat's grace":'Automatically pass balance tests. Does not work on objects that cannot support their weight.',
     "cats grace":'Automatically pass balance tests. Does not work on objects that cannot support their weight.',
+    "fluent swiftness":"Reroll Blood Surge on a Dexterity or Celerity test.",
     'rapid reflexes':'Faster reactions and minor actions. This power also prevents them from taking a penalty when they have no cover during a firefight.',
     "fleetness":"Add Celerity rating for non-combat Dexterity test or defending. This may be used once per turn when defending with associated pools.",
     "rush job":"Perform a Skill-related task that would take a long time in mere seconds. This power does not speed up attacks or defenses.",
@@ -190,10 +208,14 @@ all_discipline = {
     'tabula rasa':"Erase the victim's memory to the point they don't know who they are.\nDice: Resolve + Dominate vs Composure + Resolve\nFollowing this power's use is generally a string of lies and Path Indoctrination.",
     'mass manipulation':"Extend effects of Dominate to multiple targets. The victims need to see the eyes of the user. The user makes the roll against the strongest of the group.",
     'terminal decree':"	Bolster effects of Dominate to be able to circumvent victims' self-preservation. Terminal commands are always resisted instead of auto failing.",
+    "lethe's call":"Erase weeks' worth of memory.\nPrerequisites: Cloud Memory or Forgetful Mind\nDice: Manipulation + Dominate vs Intelligence + Resolve\nUnprepared mortals cannot test to resist the power. With a verbal command only memories surrounding the spoken subject will be erased.",
+    "lethes call":"Erase weeks' worth of memory.\nPrerequisites: Cloud Memory or Forgetful Mind\nDice: Manipulation + Dominate vs Intelligence + Resolve\nUnprepared mortals cannot test to resist the power. With a verbal command only memories surrounding the spoken subject will be erased.",
+    "lethe call":"Erase weeks' worth of memory.\nPrerequisites: Cloud Memory or Forgetful Mind\nDice: Manipulation + Dominate vs Intelligence + Resolve\nUnprepared mortals cannot test to resist the power. With a verbal command only memories surrounding the spoken subject will be erased.",
 
     #FORTITUDE
     "resilience":"Add their Fortitude rating to the health track.",
     "unswayable":"Mind	Add Fortitude rating to rolls to resist methods to sway the character's mind against their will including supernatural.",
+    "Fluent Endurance":"Reroll the Blood Surge rouse check on a Stamina or Fortitude test.",
     "earth's perseverance":"Become impossible to move from that spot. While they cannot be moved, they can still be harmed and so can the floor beneath them.",
     "earths perseverance":"Become impossible to move from that spot. While they cannot be moved, they can still be harmed and so can the floor beneath them.",
     "enduring beasts":"Share the vampire's toughness with animals.\nDice: Stamina + Animalism\nAmalgam:	Animalism ●\nIf used on their Famulus, it is free and automatic without a roll required.",
@@ -214,12 +236,14 @@ all_discipline = {
     #OBFUSCATE
     'cloak of shadows':'As long as the user stands still they blend into their surroundings.',
     'silence of death':"Nullifies the sounds a user makes. This power does not eliminate powers made outside of the user's personal space.",
+    'ensconce':"Make others ignore small objects that are held on the vampire's body.\nSense Unseen can pierce this power.",
+    'cache':'Hide objects that are not held by the vampire.\nThis can be extended for the duration of the night with an extra rouse check.\nPrerequisite: Ensconce',
     "chimerstry":"Create brief but realistic hallucinations.\nDice: Manipulation + Obfuscate vs Composure + Wits\nAmalgam: Presence ●\nThis can be used in combat but can only affect targets once per conflict.",
     "ghost's passing":"The user can bestow Obfuscate onto an animal.\nAmalgam: Animalism ●\nSense the Unseen can discern signs as per general Obfuscate rules",
     "unseen passage":"The user can now move while remaining hidden. This power will fail if the user is being actively watched when activated.",
     "ventriloquism":"Throw their voice so only the intended recipient can hear it.\nDice: Wits + Obfuscate vs Resolve + Composure\nAmalgam: Auspex ●●\nCan be used on anyone in line of sight.",
-    "doubletalk":"Say one thing but convey something else in secret.\nDice: Composure + Obfuscate vs Wits + Auspex\nAmalgam: 	Auspex ●.Others present can contest.",
-    "fata morgana":	"Elaborate hallucinations.\nDice: Manipulation + Obfuscate\Amalgam: Presence ●●\nIf the hallucination can trigger Frenzy, give the test at 1 diff lower than the real thing.",
+    "doubletalk":"Say one thing but convey something else in secret.\nDice: Composure + Obfuscate vs Wits + Auspex\nAmalgam: Auspex ●.Others present can contest.",
+    "fata morgana":	"Elaborate hallucinations.\nDice: Manipulation + Obfuscate\nAmalgam: Presence ●●\nIf the hallucination can trigger Frenzy, give the test at 1 diff lower than the real thing.",
     "ghost in the machine":	"Allows the effects of Obfuscate to be transmitted through technology when viewed on a live screen. 	If viewed later the image seems blurred, making identification harder.",
     "mask of a thousand faces":	"Make themselves appear as a mundane face rather than disappear allowing interaction and communication. This power allows them to interact and speak to others around them.",
     "mask of isolation":"Force Mask of a Thousand Faces onto a victim.\nDice: Manipulation + Obfuscate vs Charisma + Insight\nAmalgam: Dominate ●\nPrerequisite: Mask of a Thousand Faces\nShould the user be made aware of the power being used on them the effects end.",
@@ -278,10 +302,12 @@ all_discipline = {
     "pit of contemplation":	"Cast an enemy into Oblivion itself.\nDice: Resolve + Oblivion\nPrerequisite: Tenebrous Avatar\nMortals sucked in are instantly killed.",
     "ashen relic":"Preservation of a Kindred's body.\nDice: Resolve + Oblivion\nThree successes in the margin preserves more.",
     "wisdom of the dead":"Gain information from a corpse skull or head.\nDice: Resolve + Oblivion\nPrerequisite: Ashes to Ashes or Oblivion's Sight.\nAdd two dice to their dice pool if they are still carrying the skull/head for the rest of the night.",
+    "shallow slumber":"Reduces time spent in torpor.\nDice: Resolve + Oblivion\nPrerequisite: Passion Feast or Touch of Oblivion",
 
     #POTENCE
     'lethal body':'Unarmed attacks do Aggravated Health damage to mortals when used and ignore one level of armor per Potence rating of user.',
     'soaring leap':'Leap higher and further than usual. They can move as many meters as three times their Potence rating.',
+    "fluent strength":"Reroll Blood Surge rouse checks on Strength or Potence rolls.",
     'prowess':'Add Potence rating to their unarmed damage and to feats of Strength, add half their Potence rating (Rounded up) to Melee damage.',
     'relentless grasp':'Gain supernatural grip strength. Does not benefit the initial grapple test.',
     'brutal feed':"Turn feeding into a violent and messy affair that only lasts seconds to Slake the user's Hunger.",
@@ -334,6 +360,7 @@ all_discipline = {
     "mist form":"Turn into a cloud of mist. This power takes three turns to use and may be sped up with additional Rouse Checks on a one-for-one trade.",
     "one with the land":"Sink into the earth of their Domain.\nAmalgam: Animalism ●●\nPrerequisite: Earth Meld\nSame system as Earth Meld however they are not limited by the material.",
     "the unfettered heart":"The heart of the vampire can move freely within the chest, making staking more difficult. Only upon a critical win does the stake penetrate when in melee combat.",
+    "blood form":"Turn into an amorphous mass of blood.\nPrerequiste: Blood Sorcery ●●\nCan be consumed, creating blood bonds as normal.",
 
     #THIN BLOOD ALCHEMY
     "body paint":"Create tattoos with personal touches beyond regular tattoos\nCholeric\n\nDice: Dexterity + Craft\nAfter a week, the roll to alter the tattoo is Stamina + Resolve",
